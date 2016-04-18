@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="DAEM TALCA CV" content="">
+    <meta name="mmoscoso" content="">
+
+    <title>{% block title %}DAEM Talca - Plataforma para CV{% endblock %}</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="{{path('daem_cv_default_index')}}">DAEM Talca</a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- ACCESS SECTION -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Formulario de Registro - DAEMCV</h1><br><br>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+
+<!-- FOSUSER EXTEND TEST -->
+{% block fos_user_content %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('daem_cv_default_register'), 'attr': {'class': 'daem_cv_default_register'}}) }}
+
+    <div class="form-group text-left">
+      {{ form_label(form.username) }}
+      {{ form_errors(form.username) }}
+      {{ form_widget(form.username) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.email) }}
+      {{ form_errors(form.email) }}
+      {{ form_widget(form.email, { 'attr': {'class': 'form-control','placeholder': 'Email / Correo'} }) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.plainPassword.first) }}
+      <p class="text-danger">{{ form_errors(form.plainPassword.first) }}</p>
+      {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-control','placeholder': 'Contraseña'} }) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.plainPassword.second) }}
+      <p class="text-danger">{{ form_errors(form.plainPassword.second) }}</p>
+      {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control','placeholder': 'Repita la Contraseña'} }) }}
+    </div>
+    <hr>
+    <div class="form-group text-left">
+      {{ form_label(form.firstname) }}
+      <p class="text-danger">{{ form_errors(form.firstname) }}</p>
+      {{ form_widget(form.firstname) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.middlename) }}
+      <p class="text-danger">{{ form_errors(form.middlename) }}</p>
+      {{ form_widget(form.middlename) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.lastname) }}
+      <p class="text-danger">{{ form_errors(form.lastname) }}</p>
+      {{ form_widget(form.lastname) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.momlastname) }}
+      <p class="text-danger">{{ form_errors(form.momlastname) }}</p>
+      {{ form_widget(form.momlastname) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.gender) }}
+      <p class="text-danger">{{ form_errors(form.gender) }}</p>
+      {{ form_widget(form.gender) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.birthdate) }}
+      <p class="text-danger">{{ form_errors(form.birthdate) }}</p>
+      {{ form_widget(form.birthdate) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.phone) }}
+      <p class="text-danger">{{ form_errors(form.phone) }}</p>
+      {{ form_widget(form.phone) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.celphone) }}
+      <p class="text-danger">{{ form_errors(form.celphone) }}</p>
+      {{ form_widget(form.celphone) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.address) }}
+      <p class="text-danger">{{ form_errors(form.address) }}</p>
+      {{ form_widget(form.address) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_label(form.city) }}
+      <p class="text-danger">{{ form_errors(form.city) }}</p>
+      {{ form_widget(form.city) }}
+    </div>
+
+    <div>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Registrar" />
+    </div>
+{{ form_end(form) }}
+
+
+{% endblock fos_user_content %}
+
+<!-- FOSUSER EXTEND TEST -->
+
+                    </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-12"><hr></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ACCESS SECTION -->
+
+
+
+    <!-- jQuery -->
+    <script src="{{asset('js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="{{asset('js/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('js/scrolling-nav.js')}}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="DAEM TALCA CV" content="">
+    <meta name="mmoscoso" content="">
+
+    <title>DAEM Talca - Plataforma para CV</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">DAEM Talca</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Sobre DAEM CV</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{path("daem_cv_default_access")}}">Acceso a DAEMCV</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>DAEM CV</h1>
+                    <p><strong>Plataforma para la gesti&oacute; de CV:</strong> Aqu&iacute los Docente podran enviar sus CV para postular y acceder a trabajos gestionados por el DAEM.</p>
+                    <a class="btn btn-default page-scroll" href="#about">Conoce m&aacute; aqu&iacute;!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section grey-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>DAEM CV</h1>
+                    <br>
+                <div class="col-lg-6 text-justify ">
+                <b>¿Qu&eacute; es DAEM CV?</b><br><br>
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
+                cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó
+                una galería de textos y los mezcló de tal manera que logró hacer un libro de
+                textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como
+                texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
+                Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian
+                pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por
+                ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+                </div>
+                <div class="col-lg-6 text-justify">
+                <b>¿Qui&eacute;nes se puede registar?</b><br><br>
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
+                cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó
+                una galería de textos y los mezcló de tal manera que logró hacer un libro de
+                textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como
+                texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
+                Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian
+                pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por
+                ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<br><br>
+
+                <p class="text-right">RAFAEL OYARZÚN CASTILLO<br>Jefe Departamento de Personal</p>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contactanos</h1>
+                    <!--  CONTACT FORM -->
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                    <form class="white-background ">
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="inputName" placeholder="Nombre">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <textarea class="form-control" rows="3" name="inputMessage" id="inputMessage" placeholder="Mensaje a enviar"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-default">Enviar</button>
+                    </form>
+                    </div>
+                    <div class="col-lg-3"></div>
+                <!-- END CONTACT FORM -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="{{asset('js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="{{asset('js/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('js/scrolling-nav.js')}}"></script>
+
+</body>
+
+</html>
